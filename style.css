@@ -288,25 +288,23 @@ body {
   .nav-links a{
     display:flex;
     align-items:center;
-
     width:100%;
     padding:12px 14px;
-
     border-radius:10px;
-
     text-decoration:none;
-
+    position: relative;
+    z-index: 2;
     color:#e2e8f0;
-
     font-size:0.95rem;
     font-weight:500;
-
     transition:0.25s ease;
   }
-   .plane {
+  .plane {
     top: -100px; 
     left: -530px;
-
+    opacity: 0.9;
+     z-index: 1;
+     pointer-events: none;
    }
 
 .plane-shadow{
@@ -1416,6 +1414,105 @@ h2.title {
 .submit-btn:hover{
   background:#274bdb;
 }
+
+
+
+@media (max-width: 768px) {
+  .modal-box {
+    width: 92%;
+    max-width: 400px;
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .modal-header h2 {
+    font-size: 1rem;
+  }
+
+  #closeModal {
+    font-size: 22px;
+  }
+
+  .input-group input,
+  .input-group select {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 15px;
+  }
+
+  .modal-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 18px 15px;
+    border-radius: 12px;
+  }
+
+  .modal-header {
+    margin-bottom: 15px;
+  }
+
+  .modal-header h2 {
+    font-size: 0.95rem;
+  }
+
+  #closeModal {
+    font-size: 20px;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-group label {
+    font-size: 10px;
+  }
+
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .modal-box {
+    padding: 15px 12px;
+  }
+
+  .modal-header h2 {
+    font-size: 0.9rem;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 12px;
+    padding: 9px;
+  }
+
+  .submit-btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
 
 .footer {
     background: #0f172a;
